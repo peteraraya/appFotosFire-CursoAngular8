@@ -16,7 +16,7 @@ export class CargaImagenesService {
 
 
   cargarImagenesFirebase(archivos: FileItem[]) {
-    console.log(archivos);
+    // console.log(archivos);
 
     const storageRef = firebase.storage().ref();
 
@@ -37,10 +37,10 @@ export class CargaImagenesService {
           console.error('Error al subir: ', error)
         },
         async () => {
-          console.log("Imagen cargada correctamente");
+          // console.log("Imagen cargada correctamente");
           item.url = await uploadTask.snapshot.ref.getDownloadURL();
           item.estaSubiendo = false;
-          console.log('url error ' + uploadTask.snapshot.downloadURL);
+          // console.log('url error ' + uploadTask.snapshot.downloadURL);
           this.guardarImagen({
             nombre: item.nombreArchivo,
             url: item.url

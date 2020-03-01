@@ -55,7 +55,7 @@ export class NgDropFilesDirective {
 
   private _extraerArchivos(archivosLista: FileList) {
 
-    console.log( archivosLista );
+    // console.log( archivosLista );
 
     // tslint:disable-next-line:forin Se hace un ciclo for para barrer con todas las propiedades de ese objeto
     for (const propiedad in Object.getOwnPropertyNames(archivosLista)) {
@@ -95,7 +95,7 @@ export class NgDropFilesDirective {
     for (const archivo of this.archivos) {
 
       if (archivo.nombreArchivo === nombreArchivo) {
-        console.log('El archivo ' + nombreArchivo + ' ya esta agregado');
+        // console.log('El archivo ' + nombreArchivo + ' ya esta agregado');
         return true;
       }
 
